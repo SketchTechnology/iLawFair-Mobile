@@ -1,0 +1,111 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Home",
+      "icon": "menu-icon tf-icons ti ti-smart-home",
+      "slug": "pages-home"
+    },
+    {
+      "icon": "menu-icon tf-icons ti ti-server",
+      "name": "Categories",
+      "slug": "categories",
+      "submenu": [
+        {
+          "url": "categories",
+          "name": "list",
+          "slug": "categories.index"
+        },
+        {
+          "url": "categories/create",
+          "name": "create",
+          "slug": "categories.create"
+        }
+      ]
+    },
+    {
+      "icon": "menu-icon tf-icons ti ti-user",
+      "name": "Authors",
+      "slug": "authors",
+      "submenu": [
+        {
+          "url": "authors",
+          "name": "list",
+          "slug": "authors.index"
+        },
+        {
+          "url": "authors/create",
+          "name": "create",
+          "slug": "authors.create"
+        }
+      ]
+    },
+    {
+      "icon": "menu-icon tf-icons ti ti-building",
+      "name": "Publishing Houses",
+      "slug": "publishing-houses",
+      "submenu": [
+        {
+          "url": "publishing-houses",
+          "name": "list",
+          "slug": "publishing-houses.index"
+        },
+        {
+          "url": "publishing-houses/create",
+          "name": "create",
+          "slug": "publishing-houses.create"
+        }
+      ]
+    },
+    {
+      "icon": "menu-icon tf-icons ti ti-book",
+      "name": "Books",
+      "slug": "books",
+      "submenu": [
+        {
+          "url": "books",
+          "name": "list",
+          "slug": "books.index"
+        },
+        {
+          "url": "books/create",
+          "name": "create",
+          "slug": "books.create"
+        }
+      ]
+    },
+    {
+      "icon": "menu-icon tf-icons ti ti-shopping-cart",
+      "name": "orders",
+      "slug": "orders",
+      "submenu": [
+        {
+          "url": "#",
+          "name": "list",
+          "slug": "orders.index"
+        },
+        {
+          "url": "#",
+          "name": "create",
+          "slug": "orders.create"
+        }
+      ]
+    },
+    {
+      "icon": "menu-icon tf-icons ti ti-gift",
+      "name": "offers",
+      "slug": "offers",
+      "submenu": [
+        {
+          "url": "orders/with-offers",
+          "name": "list",
+          "slug": "offers.show_orders_with_offers"
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
