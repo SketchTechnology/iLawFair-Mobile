@@ -9,22 +9,21 @@ class Order extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'company_id',
-        'location',
-        'destination',
-        'seller_name',
-        'customer_name',
-        'customer_notes',
-        'order_status',
-        'attachment',   
-    ];
+    protected $fillable = ['user_id', 'cart_id', 'total_price'];
 
-    public function users()
+    public function user()
     {
-        return $this->belongsToMany(User::class, 'order_user')
-            ->withTimestamps()
-            ->withPivot('chosen')
-            ->using(OrderUser::class);
+        return $this->belongsTo(User::class);
     }
+
+    public function orderItems()
+    {
+        return $this->hasMany(OrderItem::class);
+    }
+
+    public function cart()
+    {
+        return $this->belongsTo(Cart::class);
+    }
+
 }

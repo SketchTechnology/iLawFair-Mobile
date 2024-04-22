@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\BookController;
 use App\Http\Controllers\Api\AuthorController;
+use App\Http\Controllers\Api\CartController;
+use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\PublishingHouseController as ApiPublishingHouseController;
 
 /*
@@ -51,3 +53,21 @@ Route::get('publishing-houses/search', [ApiPublishingHouseController::class, 'se
 Route::get('books/search', [BookController::class, 'search']);
 
 Route::get('/books/{id}', [BookController::class, 'download']);
+
+
+
+// Cart 
+
+Route::get('cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('cart', [CartController::class, 'store'])->name('cart.store');
+Route::put('cart/{cartItem}', [CartController::class, 'update'])->name('cart.update');
+Route::delete('cart/clear', [CartController::class, 'clear'])->name('cart.clear');
+Route::delete('cart/{cartItem}', [CartController::class, 'destroy'])->name('cart.destroy');
+
+
+
+// orders 
+Route::get('orders', [OrderController::class, 'index'])->name('orders.index');
+Route::post('orders', [OrderController::class, 'store'])->name('orders.store');
+Route::get('orders/{order}', [OrderController::class, 'show'])->name('orders.show');
+Route::delete('orders/{order}', [OrderController::class, 'destroy'])->name('orders.destroy');
