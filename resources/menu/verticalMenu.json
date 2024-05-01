@@ -80,14 +80,9 @@
       "slug": "orders",
       "submenu": [
         {
-          "url": "#",
+          "url": "http://127.0.0.1:8000/orders",
           "name": "list",
           "slug": "orders.index"
-        },
-        {
-          "url": "#",
-          "name": "create",
-          "slug": "orders.create"
         }
       ]
     },

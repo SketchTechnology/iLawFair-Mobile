@@ -51,7 +51,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('authors/{author}/books',[AuthorController::class, 'showBooks'])->name('authors.books');
     Route::get('publishing-houses/{publishingHouse}/books', [PublishingHouseController::class, 'showBooks'])->name('publishing-houses.books');
-
+    Route::resource('orders', OrderController::class);
 });
 
 
